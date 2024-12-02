@@ -25,6 +25,12 @@ document.getElementById('submit-button').addEventListener('click', function() {
   
     const morningRoutine = document.querySelector('input[name="morning-routine"]:checked');
     if (morningRoutine) totalScore += parseInt(morningRoutine.value);
+       
+    const google = document.querySelector('input[name="google"]:checked');
+    if (google) totalScore += parseInt(google.value);
+
+    const  decisions = document.querySelector('input[name=" decisions"]:checked');
+    if (decisions) totalScore += parseInt(decisions.value);
   
     // Show results based on total score
     const resultContainer = document.getElementById('result-container');
