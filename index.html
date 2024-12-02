@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://use.typekit.net/omy8qch.css">
+  <link rel="stylesheet" href="https://use.typekit.net/omy8qch.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Worth Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <img src="logo.jpg" alt="Icon" class="header-icon">
+    <h1>Find Out Your Worth</h1>
+    <p class="intro-text">Ever wondered if your identity could use a little boost? Our Worth Calculator is here to show you exactly where you stand. Whether you’re just starting out or already at the top, find out if you need ID Co.'s expert touch to elevate your identity to the next level. Ready to see if it's time for an upgrade? Let's go!</p><br>
+    <br>
+    <form id="quiz-form">
+      <div class="question">
+        <label>1. How many followers do you have on social media?</label><br>
+        <input type="radio" name="followers" value="1"> 0-500<br>
+        <input type="radio" name="followers" value="2"> 500-2,000<br>
+        <input type="radio" name="followers" value="3"> 2,000-10,000<br>
+        <input type="radio" name="followers" value="4"> 10,000+<br>
+      </div>
+      
+      <div class="question">
+        <label>2. How would you describe your aesthetic?</label><br>
+        <input type="radio" name="aesthetic" value="1"> Minimalist<br>
+        <input type="radio" name="aesthetic" value="2"> It Girl<br>
+        <input type="radio" name="aesthetic" value="3"> Corporate Hustler<br>
+        <input type="radio" name="aesthetic" value="4"> Travel Geek<br>
+        <input type="radio" name="aesthetic" value="5"> Wellness Guru<br>
+      </div>
+
+      <!-- New Questions -->
+      <div class="question">
+        <label>3. What's your relationship with trends?</label><br>
+        <input type="radio" name="trends" value="1"> I follow every trend<br>
+        <input type="radio" name="trends" value="2"> I pick and choose carefully<br>
+        <input type="radio" name="trends" value="3"> I avoid trends like the plague<br>
+      </div>
+      
+      <div class="question">
+        <label>4. How much do you spend on "lifestyle" purchases each month?</label><br>
+        <input type="radio" name="lifestyle" value="1"> $0-$50<br>
+        <input type="radio" name="lifestyle" value="2"> $50-$200<br>
+        <input type="radio" name="lifestyle" value="3"> $200-$500<br>
+        <input type="radio" name="lifestyle" value="4"> $500+<br>
+      </div>
+      
+      <div class="question">
+        <label>5. How often do you change your personal style or "look"?</label><br>
+        <input type="radio" name="style" value="1"> Rarely (I'm classic)<br>
+        <input type="radio" name="style" value="2"> Every few months (I evolve)<br>
+        <input type="radio" name="style" value="3"> Constantly (I’m always fresh)<br>
+      </div>
+
+      <div class="question">
+        <label>6. What's your relationship with your phone?</label><br>
+        <input type="radio" name="phone" value="1"> It’s my lifeline, I can’t live without it.<br>
+        <input type="radio" name="phone" value="2"> I check it a few times a day.<br>
+        <input type="radio" name="phone" value="3"> I’m often off the grid.<br>
+      </div>
+
+      <div class="question">
+        <label>7. What is your definition of success?</label><br>
+        <input type="radio" name="success" value="1"> Owning stuff and being admired by others.<br>
+        <input type="radio" name="success" value="2"> Living authentically and with purpose.<br>
+        <input type="radio" name="success" value="3"> Being happy and content with my life.<br>
+      </div>
+
+      <div class="question">
+        <label>8. Which of the following best describes your morning routine?</label><br>
+        <input type="radio" name="morning-routine" value="1"> Coffee and minimal effort<br>
+        <input type="radio" name="morning-routine" value="2"> A morning wellness ritual (green juice, meditation, etc.)<br>
+        <input type="radio" name="morning-routine" value="3"> I hustle from the moment I wake up<br>
+        <input type="radio" name="morning-routine" value="4"> Sleep until I can’t anymore<br>
+      </div>
+
+      <button type="button" id="submit-button">Calculate My Worth</button>
+    </form>
+
+    <div id="result-container" class="hidden">
+      <h2>Your Identity Worth:</h2>
+      <p id="result-text"></p>
+      <p id="suggested-package"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
