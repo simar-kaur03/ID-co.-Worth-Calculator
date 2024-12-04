@@ -78,4 +78,15 @@ body {
     font-size: 18px;
     color: #666;
   }
+
+#rank-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #28a745; /* Green for top rank */
+    margin-top: 10px;
+}
+
+#rank-text.bottom {
+    color: #dc3545; /* Red for bottom rank */
+}
   
