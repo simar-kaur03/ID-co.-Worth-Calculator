@@ -29,14 +29,26 @@ document.getElementById('submit-button').addEventListener('click', function() {
     const google = document.querySelector('input[name="google"]:checked');
     if (google) totalScore += parseInt(google.value);
 
-    const  decisions = document.querySelector('input[name=" decisions"]:checked');
+    const  decisions = document.querySelector('input[name="decisions"]:checked');
     if (decisions) totalScore += parseInt(decisions.value);
   
+    // Rank Calculation based on score
+    let rankMessage = '';
+    if (totalScore >= 76) {
+      rankMessage = "You’re in the top 25%!";
+    } else if (totalScore >= 51) {
+      rankMessage = "You're in the middle 50%. Keep it up!";
+    } else {
+      rankMessage = "You're in the bottom 25%. Consider an upgrade!";
+    }
+
     // Show results based on total score
     const resultContainer = document.getElementById('result-container');
     const resultText = document.getElementById('result-text');
     const suggestedPackage = document.getElementById('suggested-package');
-    
+    const rankText = document.createElement('p');  // New paragraph for rank message
+
+    // Display results based on score
     if (totalScore >= 76) {
       resultText.textContent = "Congratulations, you’ve made it! Your identity is as curated as it gets.";
       suggestedPackage.textContent = "Maximize Your Impact with Our Premium Packages";
@@ -50,7 +62,11 @@ document.getElementById('submit-button').addEventListener('click', function() {
       resultText.textContent = "You're still figuring it out. Maybe it's time to invest in an upgrade.";
       suggestedPackage.textContent = "Unlock Your Potential: Start with Our Basic Packages Today!";
     }
-  
+
+    // Display rank message
+    rankText.textContent = rankMessage;
+    resultContainer.appendChild(rankText);  // Append rank message to the result container
+
     // Show the result
     resultContainer.classList.remove('hidden');
 });
